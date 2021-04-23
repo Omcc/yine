@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-22 22:16+0000\n"
+"POT-Creation-Date: 2021-04-23 13:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: question/models.py:11
+#: question/models.py:11 question/models.py:28
 msgid "Subject"
 msgstr "Konu"
 
@@ -28,19 +28,51 @@ msgstr "Konu"
 msgid "Subjects"
 msgstr "Konular"
 
-#: question/models.py:20
-msgid "option1"
-msgstr "seçenek 1"
-
-#: question/models.py:21
-msgid "option2"
-msgstr "seçenek 2"
+#: question/models.py:23
+msgid "Unknown"
+msgstr "Belirsiz"
 
 #: question/models.py:24
+msgid "Easy"
+msgstr "Kolay"
+
+#: question/models.py:25
+msgid "Intermediate"
+msgstr "Orta"
+
+#: question/models.py:26
+msgid "Hard"
+msgstr "Zor"
+
+#: question/models.py:30
+#, fuzzy
+#| msgid "option1"
+msgid "Option 1"
+msgstr "seçenek 1"
+
+#: question/models.py:31
+#, fuzzy
+#| msgid "option2"
+msgid "Option 2"
+msgstr "seçenek 2"
+
+#: question/models.py:32
+#, fuzzy
+#| msgid "option1"
+msgid "Option 3"
+msgstr "seçenek 1"
+
+#: question/models.py:33
+#, fuzzy
+#| msgid "option1"
+msgid "Option 4"
+msgstr "seçenek 1"
+
+#: question/models.py:37
 msgid "Question"
 msgstr "Soru"
 
-#: question/models.py:25
+#: question/models.py:38
 #, fuzzy
 #| msgid "Question"
 msgid "Questions"
