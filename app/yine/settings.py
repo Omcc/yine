@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'more_admin_filters',
     'rest_framework',
     'administration',
+    "smart_selects",
 ]
 
 MPTT_ADMIN_LEVEL_INDENT = 20
