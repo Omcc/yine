@@ -40,7 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'question',
     'mptt',
-    'more_admin_filters'
+    'more_admin_filters',
+    'rest_framework',
+    'administration',
 ]
 
 MPTT_ADMIN_LEVEL_INDENT = 20
