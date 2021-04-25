@@ -40,6 +40,9 @@ class Question(models.Model):
         verbose_name=_('Question')
         verbose_name_plural = _('Questions')
 
+    def __str__(self):
+        return "{} Zorluk:{} ".format(self.subject,self.DIFFICULTY_IN_QUESTION_CHOICES[self.difficulty][1])
+
 
 
 class Test(models.Model):

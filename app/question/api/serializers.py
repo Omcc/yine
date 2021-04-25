@@ -7,7 +7,17 @@ from question.models import Subject
 class SubjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Subject
-        fields = ['name']
+        fields = ['id','name','level']
+
+class SubjectTreeSerializer(serializers.ModelSerializer):
+    children = serializers.SerializerMethodField(source='get_children')
+    class Meta:
+        model=Subject
+        fields = ('children',)
+    def get_children(self,obj):
+        children = self.context['children'].get(obj.id,[])
+        serializer = SubjectSerializer(children,many=True,context=self.context)
+        return serializer.data
 
 class QuestionSerializer(serializers.ModelSerializer):
     subject= SubjectSerializer(read_only=True)
@@ -20,3 +30,4 @@ class TestSerializer(serializers.ModelSerializer):
     class Meta:
         model = Test
         fields = ['name','questions']
+

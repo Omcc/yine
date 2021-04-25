@@ -1,5 +1,8 @@
 from django.contrib import admin
 from mptt.admin import DraggableMPTTAdmin
+from django.forms import CheckboxSelectMultiple
+from django.db import models
+
 
 from question.models import Subject,Question
 from question.models import Test
@@ -47,5 +50,12 @@ admin.site.register(
     SubjectAdmin,
 )
 
+class TestAdmin(admin.ModelAdmin):
+    formfield_overrides = {
+        models.ManyToManyField : {'widget':CheckboxSelectMultiple}
+    }
+    filter_horizontal = ('questions',)
+
+
 admin.site.register(Question)
-admin.site.register(Test)
+admin.site.register(Test,TestAdmin)
